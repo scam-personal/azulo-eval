@@ -1,0 +1,63 @@
+# This docker compose file contains mysql-server, cache service for directus, directus and  flyway
+# Compose all the services together takes several minutes, please wait
+version: '3.5'
+services:
+  # MYSQL SERVER CONTAINER
+  database:
+    image: mysql
+    container_name: database
+    environment:
+      - MYSQL_ROOT_PASSWORD=azulodev
+      - MYSQL_DATABASE=azulo
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3306:3306
+    networks:
+      - dev
+  # CAHCE SERVICE
+  cache:
+    container_name: cache
+    image: redis:6
+    networks:
+      - dev
+  # DIRECTUS ISNTANCE
+  directus:
+    image: directus/directus
+    container_name: directus
+    environment:
+      KEY: '255d861b-5ea1-5996-9aa3-922530ec40b1'
+      SECRET: '6116487b-cda1-52c2-b5b5-c8022c45e263'
+      DB_CLIENT: 'mysql'
+      DB_HOST: 'database'
+      DB_PORT: '3306'
+      DB_DATABASE: 'directus'
+      DB_USER: 'root'
+      DB_PASSWORD: 'azulodev'
+      CACHE_ENABLED: 'true'
+      CACHE_STORE: 'redis'
+      CACHE_REDIS: 'redis://cache:6379'
+      ADMIN_EMAIL: 'admin@admin.com'
+      ADMIN_PASSWORD: 'admin'
+    restart: unless-stopped
+    depends_on:
+      - cache
+      - database
+    ports:
+      - 8055:8055
+    networks:
+      - dev
+  # FLYWAY ISNTANCE
+  flyway:
+    image: flyway/flyway
+    container_name: flyway
+    command: -url=jdbc:mysql://database -schemas=azulo -user=root -password=azulodev -connectRetries=60 migrate
+    volumes:
+      - .:/flyway/sql
+    networks:
+      - dev
+    depends_on:
+      - database
+networks:
+  dev:
+    driver: bridge 
