@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "6016905c-c697-4d1d-97a2-7248cc4a0974",
+		"name": "Airport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get-airports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/get-airports",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"get-airports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change-operator",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": 1,\n    \"Name\": \"Some name\",\n    \"AirportCode\": \"abc123\",\n    \"PriorityOrder\": \"1\",\n    \"AirportOperator_Id\": 1,\n    \"Location_Id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/airport/change-operator",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"airport",
+						"change-operator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change-priorities",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"Id\": 1,\n        \"Name\": \"Some name\",\n        \"AirportCode\": \"abc123\",\n        \"PriorityOrder\": \"1\",\n        \"AirportOperator_Id\": 1,\n        \"Location_Id\": 1\n    },\n    {\n        \"Id\": 2,\n        \"Name\": \"Another name\",\n        \"AirportCode\": \"def456\",\n        \"PriorityOrder\": \"2\",\n        \"AirportOperator_Id\": 2,\n        \"Location_Id\": 2\n    },\n    {\n        \"Id\": 3,\n        \"Name\": \"Some name 2\",\n        \"AirportCode\": \"asd456\",\n        \"PriorityOrder\": \"3\",\n        \"AirportOperator_Id\": 3,\n        \"Location_Id\": 3\n    },\n    {\n        \"Id\": 4,\n        \"Name\": \"Another name 2\",\n        \"AirportCode\": \"qwe7489\",\n        \"PriorityOrder\": \"4\",\n        \"AirportOperator_Id\": 4,\n        \"Location_Id\": 4\n    },\n    {\n        \"Id\": 5,\n        \"Name\": \"Some other name\",\n        \"AirportCode\": \"asdqwe\",\n        \"PriorityOrder\": \"5\",\n        \"AirportOperator_Id\": 5,\n        \"Location_Id\": 5\n    },\n    {\n        \"Id\": 6,\n        \"Name\": \"Another some name\",\n        \"AirportCode\": \"qweadds\",\n        \"PriorityOrder\": \"6\",\n        \"AirportOperator_Id\": 6,\n        \"Location_Id\": 6\n    },\n    {\n        \"Id\": 7,\n        \"Name\": \"Some other name 2\",\n        \"AirportCode\": \"45ds654\",\n        \"PriorityOrder\": \"7\",\n        \"AirportOperator_Id\": 7,\n        \"Location_Id\": 7\n    },\n    {\n        \"Id\": 8,\n        \"Name\": \"Another some name 2\",\n        \"AirportCode\": \"llf55f4\",\n        \"PriorityOrder\": \"8\",\n        \"AirportOperator_Id\": 8,\n        \"Location_Id\": 8\n    },\n    {\n        \"Id\": 9,\n        \"Name\": \"One more name\",\n        \"AirportCode\": \"789ad44\",\n        \"PriorityOrder\": \"9\",\n        \"AirportOperator_Id\": 9,\n        \"Location_Id\": 9\n    },\n    {\n        \"Id\": 10,\n        \"Name\": \"One more name 2\",\n        \"AirportCode\": \"hjk456\",\n        \"PriorityOrder\": \"10\",\n        \"AirportOperator_Id\": 10,\n        \"Location_Id\": 10\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/airports/change-priorities",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"airports",
+						"change-priorities"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

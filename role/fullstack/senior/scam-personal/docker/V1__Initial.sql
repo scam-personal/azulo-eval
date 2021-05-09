@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `azulo`.`Airport` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(80) NOT NULL,
   `AirportCode` VARCHAR(20) NOT NULL,
-  `PriorityOrder` VARCHAR(45) NOT NULL,
+  `PriorityOrder` INT NOT NULL,
   `AirportOperator_Id` INT NOT NULL,
   `Location_Id` INT NOT NULL,
   PRIMARY KEY (`Id`),
@@ -161,16 +161,16 @@ INSERT INTO `azulo`.`AirportOperator` (`Name`) VALUES ('Jhon Smith 10');
 -- --------------------------------------------------------
 -- Inserts table Airport
 -- --------------------------------------------------------
-INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Some name', 'abc123', '1', '1', '1');
-INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Another name', 'def456', '2', '2', '2');
-INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Some name 2', 'asd456', '3', '3', '3');
-INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Another name 2', 'qwe7489', '4', '4', '4');
-INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Some other name', 'asdqwe', '5', '5', '5');
-INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Another some name', 'qweadds', '6', '6', '6');
-INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Some other name 2', '45ds654', '7', '7', '7');
-INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Another some name 2', 'llf55f4', '8', '8', '8');
-INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('One more name', '789ad44', '9', '9', '9');
-INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('One more name 2', 'hjk456', '10', '10', '10');
+INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Some name', 'abc123', 1, '1', '1');
+INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Another name', 'def456', 2, '2', '2');
+INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Some name 2', 'asd456', 3, '3', '3');
+INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Another name 2', 'qwe7489', 4, '4', '4');
+INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Some other name', 'asdqwe', 5, '5', '5');
+INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Another some name', 'qweadds', 6, '6', '6');
+INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Some other name 2', '45ds654', 7, '7', '7');
+INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('Another some name 2', 'llf55f4', 8, '8', '8');
+INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('One more name', '789ad44', 9, '9', '9');
+INSERT INTO `azulo`.`Airport` (`Name`, `AirportCode`, `PriorityOrder`, `AirportOperator_Id`, `Location_Id`) VALUES ('One more name 2', 'hjk456', 10, '10', '10');
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

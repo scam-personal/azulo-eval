@@ -1,8 +1,7 @@
 'use strict'
 
 // COUNTRY MODEL
-
-module.exports = (sequelize, type) => {
+const Country = (sequelize, type) => {
     return sequelize.define('Country', {
         Id: {
             type: type.INTEGER,
@@ -15,3 +14,4 @@ module.exports = (sequelize, type) => {
         freezeTableName: true,
     });
 };
+module.exports = Country;

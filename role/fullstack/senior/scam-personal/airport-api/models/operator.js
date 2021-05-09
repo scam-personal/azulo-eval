@@ -2,7 +2,7 @@
 
 // OPERATOR MODEL
 
-module.exports = (sequelize, type) => {
+const Operator = (sequelize, type) => {
     return sequelize.define('Operator', {
         Id: {
             type: type.INTEGER,
@@ -15,3 +15,5 @@ module.exports = (sequelize, type) => {
         freezeTableName: true,
     });
 };
+
+module.exports = Operator;

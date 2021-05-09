@@ -1,7 +1,7 @@
 'use strict'
 
 // PROVINCE OR STATE MODEL
-module.exports = (sequelize, type) => {
+const Province = (sequelize, type) => {
     return sequelize.define('ProvinceOrState', {
         Id: {
             type: type.INTEGER,
@@ -13,4 +13,6 @@ module.exports = (sequelize, type) => {
         timestamps: false,
         freezeTableName: true,
     });
-};
+}
+
+module.exports = Province;

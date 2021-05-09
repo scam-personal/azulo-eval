@@ -6,6 +6,8 @@ var app = express();
 
 // LOAD ROUTES
 const countryRoutes = require('./routes/countryRoutes');
+const provinceRoutes = require('./routes/provinceRoutes');
+const airportRoutes = require('./routes/airportRoutes');
 
 // MIDDLEWARES
 app.use(express.urlencoded({ extended: false }));
@@ -22,6 +24,8 @@ app.get('/api/tests', (req, res) => {
 });
 
 app.use('/api', countryRoutes);
+app.use('/api',provinceRoutes);
+app.use('/api',airportRoutes);
 
 // EXPORT
 module.exports = app;

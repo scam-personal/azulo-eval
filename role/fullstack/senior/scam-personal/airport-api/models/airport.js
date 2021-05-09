@@ -2,7 +2,7 @@
 
 // AIRPORT MODEL
 
-module.exports = (sequelize, type) => {
+const Airport = (sequelize, type) => {
     return sequelize.define('Airport', {
         Id: {
             type: type.INTEGER,
@@ -17,3 +17,5 @@ module.exports = (sequelize, type) => {
         freezeTableName: true,
     });
 };
+
+module.exports = Airport;

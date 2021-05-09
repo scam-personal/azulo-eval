@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "6cb9f146-46c9-472e-9003-935061e58b5d",
+		"name": "Country",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get-countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/get-countries",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"get-countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert-country",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"Colombia\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/insert-country",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"insert-country"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-country",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"Brazil\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/update-country/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"update-country",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-country",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/delete-country/11",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"delete-country",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

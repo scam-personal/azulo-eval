@@ -1,0 +1,26 @@
+{
+	"info": {
+		"_postman_id": "2d9e0c11-903c-4ae6-b166-5a8e836f31d4",
+		"name": "Provinces",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get-provinces",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/get-provinces",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"get-provinces"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

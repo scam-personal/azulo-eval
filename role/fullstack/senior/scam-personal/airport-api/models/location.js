@@ -2,7 +2,7 @@
 
 // LOCATION MODEL
 
-module.exports = (sequelize, type) => {
+const Location = (sequelize, type) => {
     return sequelize.define('Location', {
         Id: {
             type: type.INTEGER,
@@ -16,3 +16,5 @@ module.exports = (sequelize, type) => {
         freezeTableName: true,
     });
 };
+
+module.exports = Location;
